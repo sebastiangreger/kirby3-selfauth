@@ -1,18 +1,20 @@
 # Kirby3 Selfauth
 
-A modified version of [Selfauth](https://github.com/inklings-io/selfauth) as a Kirby 3 plugin. Provides self-hosted authentication for the IndieAuth protocol - [read more](https://github.com/Inklings-io/selfauth/).
+A modified version of [Selfauth](https://github.com/inklings-io/selfauth) as a Kirby 3 plugin. Provides self-hosted authentication for the IndieAuth protocol ([read more](https://github.com/Inklings-io/selfauth/)).
 
 Hacky. Use at own risk. Issues/PRs welcome.
 
+Alternatively, you may set up IndieAuth using a third-party service, as described in this [Cookbook recipe](https://getkirby.com/docs/cookbook/integrations/indieauth).
+
 ## Adaptations
 
-While the original Selfauth is based on using a dedicated password-based login, this version relies on user login with Kirby.
+While the original Selfauth is based on using a dedicated password-based login, this version relies on the Kirby user login.
 
 - The configuration routine (from setup.php) has been reduced to the essentials needed for setting up with Kirby: no setting of a password, no auto-creation of a config.php file
 - Instead of the config.php file, configuration is stored in the config options at `site/config/config.php`
-- When not logged in, only verification requests can be made; the later parts of the code (anything related to login/authentication) are only executed after logging in to Kirby
-- The Kirby user ID is internally used instead of a password; this allows to tie the configuration to one user only (i.e. the user who runs the initial setup; other users on the same site can not use IndieAuth)
-- No authentication password has to be entered for logging in to an other site (since the user is already authenticated with Kirby); the password field in the form has been hidden and carries a dummy text, just to avoid additional rewrites of the application logic
+- When not logged in, only verification requests by other clients are processed; the later parts of the code (anything related to login/authentication) are only executed after logging in to Kirby
+- Internally, the Kirby user ID is used instead of a password; this allows to tie the configuration to one user only (i.e. the user who runs the initial setup; other users on the same site can not use IndieAuth)
+- No authentication password has to be entered when authenticating a client (since the user is already identified via Kirby); the password field in the form has been hidden and carries a dummy text, to minimize rewrite need of the application logic
 - Minor changes to some error messages
 - Removed some redundancies/checks for old PHP versions, as Kirby always runs on PHP 7
 
@@ -20,7 +22,7 @@ While the original Selfauth is based on using a dedicated password-based login, 
 
 Download and copy this repository to `/site/plugins/kirby3-selfauth`.
 
-Add `<?= selfauthEndpoint() ?>` to your template that outputs the HTML <head> (often at `site/snippets/header.php` or similar).
+Add `<?= selfauthEndpoint() ?>` to your template's HTML &lt;head&gt; (often located at `site/snippets/header.php` or similar).
 
 Visit `https://your-domain.tld/auth-setup` in your browser, log in if not already logged in, and copy the output into your options array at `site/config/config.php`.
 
