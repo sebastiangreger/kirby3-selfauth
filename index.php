@@ -374,7 +374,7 @@ require( __DIR__ . DS . 'helpers.php' );
 					if ($response_type === false) { // response_type is given as something other than id or code.
 						error_page(
 							'Faulty Request',
-							'There was an error with the request. The "response_type" field must be "id" or "code".'
+							'There was an error with the request. The "response_type" field must be "code".'
 						);
 					}
 					if ($scope === false) { // scope contains invalid characters.
@@ -386,22 +386,6 @@ require( __DIR__ . DS . 'helpers.php' );
 					if ($scope === '') { // scope is left empty.
 						// Treat empty parameters as if omitted.
 						$scope = null;
-					}
-					if ($response_type === null || $response_type === '') { // response_type is omitted or left empty.
-						// For omitted or left empty, use the default response_type.
-						$response_type = 'id';
-					}
-					if ($response_type !== 'code' && $scope !== null) { // scope defined on identification request.
-						error_page(
-							'Faulty Request',
-							'There was an error with the request. The "scope" field cannot be used with identification.'
-						);
-					}
-					if ($response_type === 'code' && $scope === null) { // scope omitted on code request.
-						error_page(
-							'Faulty Request',
-							'There was an error with the request. The "scope" field must be used with code requests.'
-						);
 					}
 
 					// If the user submitted a password, get ready to redirect back to the callback.
