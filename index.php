@@ -7,7 +7,7 @@ use Page, Response;
 /**
  * Kirby 3 Selfauth
  *
- * @version   0.1.0
+ * @version   0.1.2
  * @author    Sebastian Greger <msg@sebastiangreger.net>
  * @copyright Sebastian Greger <msg@sebastiangreger.net>
  * @link      https://github.com/sebastiangreger/kirby3-selfauth

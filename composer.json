@@ -1,7 +1,7 @@
 {
     "name": "sgkirby/selfauth",
     "description": "Single-user authorisation endpoint for Indieauth",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "kirby-plugin",
     "license": "MIT",
     "authors": [
