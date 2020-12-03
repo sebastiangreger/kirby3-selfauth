@@ -52,4 +52,4 @@ Kirby 3 Selfauth is open-sourced software licensed under the [MIT license](https
 
 Copyright © 2020 [Sebastian Greger](https://sebastiangreger.net)
 
-It is discouraged to use this plugin in any project that promotes racism, sexism, homophobia, animal abuse, violence or any other form of hate speech.
+It is discouraged to use this plugin in any project that promotes the destruction of our planet, racism, sexism, homophobia, animal abuse, violence or any other form of hate speech.
