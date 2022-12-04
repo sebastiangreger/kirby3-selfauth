@@ -30,7 +30,7 @@
 								</header>
 								<div data-theme="field" data-type="email" class="k-input"><!---->
 									<span class="k-input-element">
-										<input autocomplete="email" autofocus="autofocus" id="490" name="email" placeholder="mail@example.com" required="required" spellcheck="true" type="email" class="k-text-input" value="<?= esc(get('email')) ?>">
+										<input autocomplete="email" autofocus="autofocus" id="490" name="email" placeholder="mail@example.com" required="required" spellcheck="true" type="email" class="k-text-input" value="<?= esc(get('email') ?? '') ?>">
 									</span>
 									<span class="k-input-icon">
 										<span aria-hidden="true" class="k-icon k-icon-email">
@@ -47,7 +47,7 @@
 								</header>
 								<div data-theme="field" data-type="password" class="k-input">
 									<span class="k-input-element">
-										<input autocomplete="current-pass" id="498" minlength="8" name="pass" required="required" spellcheck="true" type="password" class="k-text-input" value="<?= esc(get('pass')) ?>">
+										<input autocomplete="current-pass" id="498" minlength="8" name="pass" required="required" spellcheck="true" type="password" class="k-text-input" value="<?= esc(get('pass') ?? '') ?>">
 									</span>
 									<span class="k-input-icon">
 										<span aria-hidden="true" class="k-icon k-icon-key">
