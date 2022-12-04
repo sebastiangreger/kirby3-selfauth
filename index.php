@@ -14,7 +14,7 @@ use Page, Response;
  * @license   MIT
  */
 
-require( __DIR__ . DS . 'helpers.php' );
+require( __DIR__ . '/helpers.php' );
 
 \Kirby::plugin('sgkirby/selfauth', [
 
