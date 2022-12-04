@@ -1,3 +1,5 @@
+🛑 This project has been archived and is **no longer maintained**. Feel free to fork it or build something awesome on top of it – it's MIT-licensed, so you're pretty free to do whatever you fancy. As-is, the archived version was still functional in Kirby 3.8, but its visual appearance broke with Kirby 3.6. There may or may not be unresolved security issues; the IndieAuth protocol has seen some recent development, which is only partially represented in the plugin's last updates.
+
 # Kirby3 Selfauth
 
 A modified version of [Selfauth](https://github.com/inklings-io/selfauth) as a Kirby 3 plugin. Provides self-hosted authentication for the IndieAuth protocol ([read more](https://github.com/Inklings-io/selfauth/)).
